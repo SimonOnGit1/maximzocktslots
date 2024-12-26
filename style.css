@@ -1,0 +1,906 @@
+        /* General Reset */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Body */
+        
+        body {
+            background-color: #0E0D0D;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        /* Navigation Bar */
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 100px;
+            background: #161A1E;
+        }
+        
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: #ED912F;
+        }
+        
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-item {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-item:hover,
+        .nav-item.current {
+            color: #ED912F;
+            text-decoration: underline;
+        }
+        
+        .sign-in {
+            color: #ED912F;
+            background: transparent;
+            border: 2px solid #ED912F;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        
+        .sign-in:hover {
+            background-color: #ED912F;
+            color: #fff;
+        }
+        /* Hero Section */
+        
+        .hero {
+            position: relative;
+            height: 90vh;
+            background: linear-gradient(135deg, #161A1E 0%, #0E0D0D 30%, #ED912F 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .hero-content {
+            z-index: 2;
+            max-width: 700px;
+            padding: 20px;
+        }
+        
+        .hero-title {
+            font-size: 54px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .hero-text {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .hero-btn {
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .hero-btn.red {
+            background-color: #ED912F;
+            color: #fff;
+        }
+        
+        .hero-btn.transparent {
+            background: transparent;
+            color: #ED912F;
+            border: 2px solid #ED912F;
+        }
+        
+        .hero-btn.transparent:hover {
+            background-color: #ED912F;
+            color: #fff;
+        }
+        /* Sections Spacing */
+        
+        section {
+            padding: 60px 80px;
+        }
+        /* Info Section */
+        
+        .info-section {
+            padding: 100px 300px;
+            background: url('images/backgroundinfo.png') no-repeat center center;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .info-content {
+            flex: 1;
+            text-align: left;
+        }
+        
+        .info-headline {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #ED912F;
+        }
+        
+        .info-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+        
+        .info-btn {
+            background: #ED912F;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .info-btn:hover {
+            background: #fff;
+            color: #ED912F;
+        }
+        
+        .info-boxes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            flex: 1;
+        }
+        
+        .info-box {
+            background: #161A1E;
+            border: 1px solid #ED912F;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        /* Giveaway Section */
+        
+        .giveaway-section {
+            padding: 100px 300px;
+            background: url('images/cards.png') no-repeat center center;
+            background-size: 20%;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .giveaway-boxes {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            flex: 1;
+        }
+        
+        .giveaway-box {
+            width: 320px;
+            height: 170px;
+            background: #161A1E;
+            border: 2px solid #ED912F;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+            color: #ccc;
+            font-size: 11px;
+            line-height: 1.4;
+        }
+        
+        .giveaway-content {
+            flex: 1;
+            text-align: left;
+        }
+        
+        .giveaway-headline {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #ED912F;
+        }
+        
+        .giveaway-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #ccc;
+        }
+        /* Glass Effect Background */
+        
+        .glass-effect {
+            background: rgba(237, 145, 47, 0.1);
+            /* Semi-transparent white */
+            backdrop-filter: blur(10px);
+            /* Blur effect for glass appearance */
+            border: 1px solid rgba(225, 137, 22, 0.2);
+            /* Subtle border */
+            border-radius: 12px;
+            /* Rounded corners */
+            padding: 20px;
+            /* Spacing inside the box */
+            box-shadow: 0 4px 10px rgba(237, 145, 47, 0.3);
+            /* Soft shadow */
+            color: #fff;
+            /* Ensure text color is readable */
+        }
+        /* Add a margin to separate sections for better spacing */
+        
+        .info-content,
+        .giveaway-content {
+            margin: 20px 0;
+        }
+        /* FAQ Section */
+        
+        .faq-section {
+            padding: 60px 80px;
+            background: #181717;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .faq-content {
+            flex: 1;
+        }
+        
+        .faq-content h2 {
+            font-size: 36px;
+            color: #ED912F;
+            margin-bottom: 20px;
+        }
+        
+        .faq-content h2 span {
+            color: red;
+        }
+        
+        .faq-content p {
+            margin-bottom: 30px;
+            color: #ccc;
+            line-height: 1.6;
+        }
+        
+        .faq-questions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .faq-question {
+            background: #0E0D0D;
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #333;
+            transition: background 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: #1F1E1E;
+        }
+        
+        .faq-question button {
+            background: transparent;
+            border: none;
+            font-size: 20px;
+            color: #fff;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .faq-question button:hover {
+            color: #ED912F;
+        }
+        
+        .faq-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .faq-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        /* Subscription Section */
+        
+        .subscribe-section {
+            background-color: #0E0D0D;
+            padding: 50px 20px;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .subscribe-section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .subscribe-form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .subscribe-form input {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #ED912F;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+        
+        .subscribe-form button {
+            background-color: #ED912F;
+            border: none;
+            color: #fff;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .subscribe-form button:hover {
+            background-color: #fff;
+            color: #ED912F;
+        }
+        /* Bonus Page */
+        /* Bonus Offers Section */
+        
+        .bonus-offers {
+            padding: 60px 100px;
+            background: #0E0D0D;
+            text-align: center;
+        }
+        
+        .bonus-offers h2 {
+            color: #ED912F;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+        /* Bonus Cards */
+        
+        .bonus-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .bonus-item {
+            display: flex;
+            align-items: center;
+            background: #161A1E;
+            border: 2px solid #ED912F;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 5px 250px;
+            gap: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .bonus-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 15px rgba(237, 145, 47, 0.5);
+        }
+        
+        .bonus-item img {
+            width: 80px;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+        .bonus-content {
+            text-align: left;
+            color: #ccc;
+        }
+        
+        .bonus-content h3 {
+            font-size: 18px;
+            color: #ED912F;
+            margin-bottom: 8px;
+        }
+        
+        .bonus-content p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .bonus-section {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .bonus-section .bonus-percent {
+            font-size: 24px;
+            color: #ED912F;
+            font-weight: 700;
+        }
+        
+        .bonus-section .bonus-label {
+            font-size: 16px;
+            color: #fff;
+            font-weight: 600;
+        }
+        
+        .bonus-btn {
+            flex: 1;
+            background: #ED912F;
+            color: #fff;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .bonus-btn:hover {
+            background: #fff;
+            color: #ED912F;
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+        }
+        /* Bonushunt Page */
+        
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 90vh;
+            /* Adjust height to nearly full screen */
+            margin: 20px 0;
+        }
+        
+        .iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            /* Removes border around iframe */
+        }
+        /* Giveaway Page */
+        /* Giveaway Hero Section */
+        
+        .giveaway-hero {
+            text-align: center;
+            padding: 80px 100px;
+            background: linear-gradient(135deg, #161A1E 0%, #0E0D0D 30%, #ED912F 100%);
+        }
+        
+        .giveaway-hero h1 {
+            font-size: 54px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        
+        .giveaway-hero p {
+            font-size: 18px;
+            color: #ccc;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .giveaway-banner img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        /* Giveaway Steps Section */
+        
+        .giveaway-steps {
+            /* Center horizontally with auto margins */
+            padding: 40px 20px;
+            /* Adjust padding for responsiveness */
+            background: #161A1E;
+            color: #ccc;
+            text-align: center;
+            /* Center text content within the section */
+            border-radius: 10px;
+            /* Optional: Add rounded corners for better appearance */
+        }
+        
+        .giveaway-steps h2 {
+            font-size: 36px;
+            color: #ED912F;
+            margin-bottom: 20px;
+        }
+        
+        .giveaway-steps ol {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            /* Center the list if needed */
+            display: inline-block;
+            /* Ensures list aligns centrally */
+            text-align: left;
+            /* Keeps text alignment of list to the left */
+        }
+        
+        .giveaway-steps strong {
+            color: #ED912F;
+        }
+        /* Giveaway Cards */
+        
+        .giveaway-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 30px 100px;
+            background: #161A1E;
+        }
+        
+        .giveaway-card {
+            background: #161A1E;
+            border: 2px solid #ED912F;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            /* Required for positioning the pseudo-element */
+            overflow: hidden;
+            /* Ensures glow stays within the box */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 2px 2px #ED912F;
+        }
+        
+        .giveaway-card::before {
+            content: "";
+            position: absolute;
+            top: -90px;
+            /* Adjust position to sit above the card */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 400px;
+            /* Diameter of the glow */
+            height: 150px;
+            /* Diameter of the glow */
+            background: radial-gradient(circle, rgba(237, 145, 47, 0.7) 0%, rgba(255, 255, 255, 0) 60%);
+            opacity: 0.8;
+            /* Adjust intensity of the glow */
+            pointer-events: none;
+            /* Prevent interaction with the glow */
+            filter: blur(20px);
+            /* Smoothens and softens the circular glow */
+            z-index: 1;
+        }
+        
+        .giveaway-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 15px rgba(237, 145, 47, 0.5);
+        }
+        
+        .giveaway-card h3 {
+            font-size: 20px;
+            color: #ED912F;
+            margin-bottom: 10px;
+        }
+        
+        .giveaway-card p {
+            font-size: 14px;
+            color: #ccc;
+            margin-bottom: 15px;
+        }
+        
+        .giveaway-card button {
+            background: #ED912F;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .giveaway-card button:hover {
+            background: #fff;
+            color: #ED912F;
+        }
+        /* Giveaway Steps Section */
+        
+        .giveaway-steps {
+            /* Center horizontally with auto margins */
+            padding: 40px 20px;
+            /* Adjust padding for responsiveness */
+            background: #161A1E;
+            color: #ccc;
+            text-align: center;
+            /* Center text content within the section */
+            border-radius: 10px;
+            /* Optional: Add rounded corners for better appearance */
+        }
+        
+        .giveaway-steps h2 {
+            font-size: 36px;
+            color: #ED912F;
+            margin-bottom: 20px;
+        }
+        
+        .giveaway-steps ol {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            /* Center the list if needed */
+            display: inline-block;
+            /* Ensures list aligns centrally */
+            text-align: left;
+            /* Keeps text alignment of list to the left */
+        }
+        
+        .giveaway-steps strong {
+            color: #ED912F;
+        }
+        /* Latest Winners Section */
+        
+        .latest-winners {
+            padding: 40px 20px;
+            background-color: #0E0D0D;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .latest-winners h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #ED912F;
+        }
+        
+        .winners-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            /* 5 winners per row */
+            gap: 20px;
+            justify-items: center;
+            padding: 0 20px;
+            margin: 10px 300px;
+        }
+        
+        .winner-card {
+            background-color: #161A1E;
+            border: 1px solid #2E2E2E;
+            border-radius: 10px;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            max-width: 180px;
+        }
+        
+        .winner-card img {
+            width: 150px;
+            /* Fixed width */
+            height: 180px;
+            /* Fixed height */
+            object-fit: cover;
+            /* Ensures images fill the area without distortion */
+            border-radius: 5px;
+            /* Optional: Keeps a slight rounding for better appearance */
+            margin-bottom: 10px;
+        }
+        
+        .winner-card p {
+            font-size: 14px;
+            color: #ccc;
+            line-height: 1.4;
+        }
+        /* Content Page */
+        
+        .content-section {
+            padding: 60px 300px;
+            text-align: center;
+        }
+        
+        .content-title {
+            font-size: 36px;
+            color: #ED912F;
+            margin-bottom: 20px;
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            justify-content: center;
+        }
+        
+        .video-box {
+            background: #161A1E;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .video-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .video-box img {
+            width: 100%;
+            display: block;
+        }
+        
+        .video-box h3 {
+            font-size: 16px;
+            color: #fff;
+            margin: 15px;
+        }
+        
+        .video-meta {
+            color: #ccc;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+        /* Footer */
+        
+        .footer {
+            background-color: #161A1E;
+            color: #ccc;
+            padding: 20px 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        .footer p {
+            margin: 0;
+        }
+        /* Responsive CSS */
+        /* Mobile phones (portrait and landscape) */
+        
+        @media only screen and (max-width: 768px) {
+            /* General Reset */
+            .navbar {
+                flex-direction: column;
+                padding: 10px 20px;
+            }
+            .nav-menu {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .hero {
+                height: auto;
+                padding: 20px;
+                text-align: center;
+            }
+            .hero-title {
+                font-size: 32px;
+            }
+            .hero-text {
+                font-size: 14px;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .info-section {
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .info-content,
+            .info-boxes {
+                padding: 0;
+            }
+            .giveaway-section {
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .giveaway-hero h1 {
+                font-size: 30px;
+            }
+            .giveaway-box {
+                width: 100%;
+            }
+            .faq-section {
+                flex-direction: column;
+                padding: 20px;
+            }
+            .faq-content,
+            .faq-image {
+                text-align: center;
+            }
+            .subscribe-form {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .winners-container {
+                grid-template-columns: repeat(2, 1fr);
+                margin: 1px 1px;
+                gap: 1px;
+                padding: 0px;
+            }
+            .content-section {
+                padding: 20px;
+            }
+            .video-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .bonus-offers {
+                padding: 30px 35px;
+            }
+            .bonus-item {
+                margin: 0px 0px;
+                flex-direction: column;
+            }
+        }
+        /* Tablets (portrait and landscape) */
+        
+        @media only screen and (min-width: 769px) and (max-width: 1024px) {
+            .navbar {
+                padding: 10px 50px;
+            }
+            .info-section,
+            .giveaway-section {
+                padding: 20px 50px;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .faq-section {
+                padding: 20px 50px;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .faq-content {
+                text-align: center;
+            }
+            .winners-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .content-section {
+                padding: 20px 50px;
+            }
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            .bonus-item {
+                margin: 5px 50px;
+                flex-direction: column;
+            }
+        }
